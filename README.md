@@ -65,7 +65,7 @@ vote     LoadBalancer   10.39.248.106   35.197.57.12   5000:30687/TCP   23m
 
 
 Step 4: As you can see, your voting app is exposed on port 5000 and result app is exposed on 5001: 
-So access the below URLs: 
+So access the below URLs: \n
 
 For Vote	: http://10.39.248.106:5000
 For Result	: http://10.39.248.106:5001 
