@@ -37,37 +37,15 @@ Verify the Deployments, Pods, and Services:
 
 $ kubectl get deployments -n vote 
 
-NAME     DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-db       1         1         1            1           22m
-redis    1         1         1            1           22m
-result   1         1         1            1           22m
-vote     1         1         1            1           22m
-worker   1         1         1            1           22m
-
-
 $ kubectl get pod -n vote 
-
-NAME                      READY   STATUS    RESTARTS   AGE
-db-5b7b495f94-jvdcp       1/1     Running   0          23m
-redis-747699bd7f-g4rm4    1/1     Running   0          23m
-result-7f9b75dcb5-cc47m   1/1     Running   0          23m
-vote-697fd946fb-9xczt     1/1     Running   0          23m
-worker-57cc69b79-hj877    1/1     Running   0          23m
-
 
 $ kubectl get svc -n vote
 
-NAME     TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
-db       ClusterIP      10.39.245.240   <none>         5432/TCP         23m
-redis    ClusterIP      10.39.246.127   <none>         6379/TCP         23m
-result   LoadBalancer   10.39.253.78    34.83.253.89   5001:31495/TCP   23m
-vote     LoadBalancer   10.39.248.106   35.197.57.12   5000:30687/TCP   23m
-
 
 Step 4: As you can see, your voting app is exposed on port 5000 and result app is exposed on 5001: 
-So access the below URLs: \n
+So access the below URLs: 
 
-For Vote	: http://10.39.248.106:5000
-For Result	: http://10.39.248.106:5001 
+For Vote	: http://LoadBalancer_IP:5000
+For Result	: http://LoadBalancer_IP:5001 
 
 
